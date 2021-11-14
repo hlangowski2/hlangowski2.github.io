@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercises</title>
+</head>
+<body>
+    <h1>JavaScript Exercises</h1>
+
+    <h2>Hello World</h2>
+    <button onclick="helloWorld()">Hello World!</button>
+
+    <h2>Hello Hailee</h2>
+    <button onclick="hello('Hailee')">Hello Hailee</button>
+
+    <h2>Hello NAME</h2>
+    <button onclick="helloName()">Hello NAME</button>
+
+    <h2>Hello Confirmed</h2>
+    <button onclick="helloConfirm()">Hello Confirmed</button>
+
+    <h2>Count to ten</h2>
+    <button onclick="countToTen">Count to ten</button>
+
+    <script>
+        function helloWorld(){
+            alert("Hello world!");
+        }
+
+        function hello(name){
+            alert("Hello" + name + "!");
+        }
+
+        function helloName(){
+            var name = prompt("Enter your name");
+            alert("Hello" + name + "!");
+        }
+
+        function helloConfirm(){
+            var name = prompt("Enter your name");
+            var confirmed = confirm("Are you sure" + " is your name?");
+
+            if (confirmed) {
+                alert("Hello" + name + "!");
+            }
+            else {
+                name = prompt("Enter your name");
+                confirmed = confirm("Are you sure that's your name?");
+                if (confirmed){
+                    alert("Hello" + name + "!");
+                }
+            }
+        }
+
+        function countToTen(){
+            
+        }
+
+    </script>
+</body>
+</hmtl>
