@@ -21,8 +21,22 @@
     <h2>Hello Confirmed</h2>
     <button onclick="helloConfirm()">Hello Confirmed</button>
 
-    <h2>Count to ten</h2>
-    <button onclick="countToTen">Count to ten</button>
+    <h2>Count to Ten</h2>
+    <div class="count-to-ten">
+        <button onclick="countToTen()">Count to Ten</button>
+    </div>
+
+    <h2>Change Div Color</h2>
+    <div id="move-div-target" class="target changed-color"></div>
+    <div class="change-div-btn">
+        <button onclick="changeColor()">Change the DIV</button>
+    </div>
+
+    <h2>Move Div Using a Class</h2>
+    <div id="move-div-target" class="target"></div>
+    <div class="move-div-btn-div">
+        <button onclick="moveDivWithClass()" id="move-div-btn">Move the DIV</button>
+    </div>
 
     <script>
         function helloWorld(){
@@ -55,7 +69,35 @@
         }
 
         function countToTen(){
+         
+        }
+
+        var isChanged = false; 
+
+        function changeColor(){
+            //document.getElementById("change-color-target").style.backgroundColor = "#fc0";
+            var color; 
             
+            if( !isChanged ) {
+                color = "#fc0";
+                isChanged = true;
+            }
+            else {
+                color = "ccc";
+                isChanged = false;
+            }
+
+            var box = document.getElementById("change-color-target");
+            box.style.backgroundColor = color;
+
+            document.getElementbyId("change-color-target").classList.toggle("changed-color");
+        }
+
+        var move = 0;
+
+        function moveDivWithClass() {
+            move += 200;
+            document.getElementById("move-div-target").style.transform = "translateX(" + move + "px)";
         }
 
     </script>
